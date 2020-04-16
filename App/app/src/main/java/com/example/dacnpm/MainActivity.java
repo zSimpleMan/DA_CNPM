@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<loginStatus> call, Response<loginStatus> response) {
                     loginStatus loginStatus = response.body();
-                    if(loginStatus.getUsername().equals("")){
+                    if(loginStatus.getUsername()==null){
                         Toast.makeText(MainActivity.this, loginStatus.getLogin(), Toast.LENGTH_SHORT).show();
                     }
                     else {
